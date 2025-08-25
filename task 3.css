@@ -1,0 +1,122 @@
+body {
+  font-family:Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  background: linear-gradient(120deg, #F0C987, #89BD9E);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  color: #fff;
+  flex-direction: column;
+}
+.game-heading{
+  font-size: 2rem;
+  margin-top: 4rem;
+}
+.game-container {
+  text-align: center;
+  background: linear-gradient(#DB4C40, #89BD9E);
+  padding: 30px 40px;
+  border-radius: 25px;
+  backdrop-filter: blur(15px);
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.start-screen {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.start-screen h1 {
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255,255,255,0.2);
+}
+
+.start-screen button {
+  padding: 14px 22px;
+  font-size: 18px;
+  font-weight: bold;
+  color: white;
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  border: 2px solid black;
+  border-radius: 14px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.start-screen button:hover {
+  transform: scale(1.05);
+}
+
+.board {
+  display: grid;
+  grid-template-columns: repeat(3, 110px);
+  grid-template-rows: repeat(3, 110px);
+  gap: 12px;
+  margin: 25px auto;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.cell {
+  width: 110px;
+  height: 110px;
+  background: rgba(255,255,255,0.05);
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  align-items: center;
+  font-size: 4rem;
+  color: #00ffcc;
+  cursor: pointer;
+  border-radius: 12px;
+  transition: 0.25s;
+}
+
+.cell:hover {
+  background: rgba(255,255,255,0.15);
+}
+
+.winning {
+  background: rgba(0,255,200,0.25) !important;
+  box-shadow: 0 0 18px #00ffcc;
+}
+
+#status {
+  margin: 15px 0;
+  font-size: 60px;
+  font-weight: 500;
+}
+
+button {
+  padding: 12px 20px;
+  margin-top: 15px;
+  font-size: 40px;
+  font-weight: bold;
+  border: none;
+  border-radius: 12px;
+  color: rgb(12, 6, 6);
+  background: linear-gradient(45deg, #ff416c, #ff4b2b);
+  cursor: pointer;
+  transition: 0.3s;
+  margin-right: 10px;
+}
+
+button:hover {
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .board {
+    grid-template-columns: repeat(3, 80px);
+    grid-template-rows: repeat(3, 80px);
+    gap: 10px;
+  }
+  .cell {
+    width: 80px;
+    height: 80px;
+    font-size: 2rem;
+  }
+}
